@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+/* THEMING  */
+
+// 1. b4 color override
+$theme-colors: (
+  "success": limegreen,
+  //   ...
+  "purple": purple,
+  "plum": plum,
+  "papayawhip": papayawhip,
+);
+
+// 2. b4 import SASS
+@import "node_modules/bootstrap/scss/bootstrap";

@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'redux-app';
+  title1 = 'redux-app';
+  title2 = 'ngRx = Redux + RxJS';
 }
