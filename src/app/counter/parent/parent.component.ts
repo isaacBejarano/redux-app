@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-parent',
   templateUrl: './parent.component.html',
-  styleUrls: ['./parent.component.scss']
+  styleUrls: ['./parent.component.scss'],
 })
-export class ParentComponent implements OnInit {
+export class ParentComponent {
+  counter = 0;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
+  // methods
+  plus(): void {
+    this.counter++;
   }
 
+  minus(): void {
+    this.counter--;
+  }
 }

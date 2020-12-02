@@ -1,0 +1,16 @@
+/* THEMING  */
+
+// 1. b4 colors override
+$theme-colors: (
+  // 1.1 default
+  "success": yellowgreen, // limegreen
+  // 1.2. custom
+  "purple": purple,
+  "plum": plum,
+  "darkorange": darkorange,
+  "orange": orange,
+  "papayawhip": papayawhip
+);
+
+// 2. b4 .scss import
+@import "node_modules/bootstrap/scss/bootstrap";

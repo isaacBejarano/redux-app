@@ -1,50 +1,48 @@
 <header>
-  <h1 class="text-purple font-weight-lighter text-center py-2">{{ title1 }}</h1>
+  <h1 class="text-purple font-weight-lighter text-center py-2">redux-app</h1>
   <h2 class="bg-plum text-light font-weight-lighter text-center py-2 m-0">
-    {{ title2 }}
+    ngRx = redux + RxJS
   </h2>
 </header>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light py-2">
-  <img src="assets/ngRx.svg" width="70" alt="" />
-  <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-  <button
-    class="navbar-toggler collapsed"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  <div class="container-fluid">
+    <img src="assets/ngRx.svg" width="70" alt="" />
 
-  <div class="navbar-collapse collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" routerLink='/'
-          >with @Input(), @Output() <span class="sr-only">(current)</span></a
-        >
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink='/redux'>with Redux</a>
-      </li>
-      <!-- <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li> -->
-    </ul>
-    <!-- <form class="form-inline my-2 my-lg-0">
-      <input
-        class="form-control mr-sm-2"
-        type="text"
-        placeholder="Search"
-        aria-label="Search"
-      />
-      <button class="btn btn-outline-info my-2 my-sm-0" type="submit">
-        Search
-      </button>
-    </form> -->
+    <button
+      #hamburger
+      class="navbar-toggler collapsed"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link text-orange"
+            routerLink="/"
+
+            (click)="ToggleNavBar(hamburger)"
+            >{{ title1 }}<span class="sr-only">(current)</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link text-plum"
+            routerLink="/redux"
+            (click)="ToggleNavBar(hamburger)"
+            >{{ title2 }}</a
+          >
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
 

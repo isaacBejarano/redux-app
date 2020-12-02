@@ -1,13 +1,1 @@
-/* THEMING  */
-
-// 1. b4 color override
-$theme-colors: (
-  "success": limegreen,
-  //   ...
-  "purple": purple,
-  "plum": plum,
-  "papayawhip": papayawhip,
-);
-
-// 2. b4 import SASS
-@import "node_modules/bootstrap/scss/bootstrap";
+@import "./app/sass/partials/theming";
