@@ -3,24 +3,29 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ChildComponent } from './counter/child/child.component';
-import { GrandchildComponent } from './counter/grandchild/grandchild.component';
+import { EmittersComponent } from './emitters/emitters.component';
+import { GrandchildComponent } from './emitters/grandchild/grandchild.component';
+import { ParentComponent } from './emitters/parent/parent.component';
+import { ChildComponent } from './emitters/child/child.component';
 import { ReduxComponent } from './redux/redux.component';
-import { ParentComponent } from './counter/parent/parent.component';
+import { RxParentComponent } from './redux/rx-parent/rx-parent.component';
+import { RxChildComponent } from './redux/rx-child/rx-child.component';
+import { RxGrandchildComponent } from './redux/rx-grandchild/rx-grandchild.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    EmittersComponent,
+    ParentComponent,
     ChildComponent,
     GrandchildComponent,
     ReduxComponent,
-    ParentComponent
+    RxParentComponent,
+    RxChildComponent,
+    RxGrandchildComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

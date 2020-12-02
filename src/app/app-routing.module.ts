@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ParentComponent } from './counter/parent/parent.component';
+import { EmittersComponent } from './emitters/emitters.component';
 import { ReduxComponent } from './redux/redux.component';
 
 const routes: Routes = [
   {
-    path: '',
-    component: ParentComponent,
+    path: 'emitters',
+    component: EmittersComponent,
   },
   {
     path: 'redux',

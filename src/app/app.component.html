@@ -6,43 +6,42 @@
 </header>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light py-2">
-  <div class="container-fluid">
-    <img src="assets/ngRx.svg" width="70" alt="" />
+  <img src="assets/ngRx.svg" width="70" alt="" />
 
-    <button
-      #hamburger
-      class="navbar-toggler collapsed"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <button
+    #hamburger
+    class="navbar-toggler collapsed"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    <div class="navbar-collapse collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a
-            class="nav-link text-orange"
-            routerLink="/"
-
-            (click)="ToggleNavBar(hamburger)"
-            >{{ title1 }}<span class="sr-only">(current)</span></a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link text-plum"
-            routerLink="/redux"
-            (click)="ToggleNavBar(hamburger)"
-            >{{ title2 }}</a
-          >
-        </li>
-      </ul>
-    </div>
+  <div class="navbar-collapse collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a
+          class="nav-link text-orange px-2"
+          routerLink="emitters"
+          routerLinkActive="active font-weight-bold"
+          (click)="ToggleNavBar(hamburger)"
+          >{{ title1 }}<span class="sr-only">(current)</span></a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link text-plum px-2"
+          routerLink="redux"
+          routerLinkActive="active font-weight-bold"
+          (click)="ToggleNavBar(hamburger)"
+          >{{ title2 }}</a
+        >
+      </li>
+    </ul>
   </div>
 </nav>
 
