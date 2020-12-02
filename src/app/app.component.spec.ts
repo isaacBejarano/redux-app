@@ -34,17 +34,17 @@ describe('AppComponent', () => {
     expect(app.title2).toEqual('ngRx = Redux + RxJS');
   });
 
-  it('renders textContent Home', () => {
+  it('renders textContent with @Input(), @Output()', () => {
     fixture.detectChanges();
     expect(ref.querySelector('.nav-item:nth-child(1)').textContent).toContain(
-      'Home'
+      'with @Input(), @Output()'
     );
   });
 
-  it('renders textContent Link', () => {
+  it('renders textContent with Redux', () => {
     fixture.detectChanges();
     expect(ref.querySelector('.nav-item:nth-child(2)').textContent).toContain(
-      'Link'
+      'with Redux'
     );
   });
 });
