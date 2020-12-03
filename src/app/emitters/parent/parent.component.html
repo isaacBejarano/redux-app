@@ -4,7 +4,9 @@
   <h4 class="text-darkorange text-center">{{ counter }}</h4>
 
   <div class="d-flex justify-content-center py-3">
-    <button class="btn btn-orange mr-1" (click)="plus()">+</button>
-    <button class="btn btn-orange ml-1" (click)="minus()">-</button>
+    <button class="btn btn-darkorange mr-1" (click)="plus()">+</button>
+    <button class="btn btn-darkorange ml-1" (click)="minus()">-</button>
   </div>
 </section>
+
+<app-child [counterLvl2]="counter" (counterEmitLvl2)="counter = $event"></app-child>

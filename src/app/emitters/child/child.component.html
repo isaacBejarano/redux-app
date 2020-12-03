@@ -1,1 +1,16 @@
-<p>child works!</p>
+<section class="py-3 border border-orange">
+  <h3 class="text-orange text-center font-weight-lighter">Child</h3>
+
+  <h4 class="text-orange text-center">{{ counterLvl2 }}</h4>
+
+  <div class="d-flex justify-content-center py-3">
+    <button class="btn btn-orange mr-1" (click)="halve()">/2</button>
+    <button class="btn btn-orange ml-1" (click)="double()">*2</button>
+  </div>
+</section>
+
+<app-grandchild
+  [counterLvl3]="counterLvl2"
+  (counterEmitLvl3)="counterEmitFromLvl3($event)"
+>
+</app-grandchild>
