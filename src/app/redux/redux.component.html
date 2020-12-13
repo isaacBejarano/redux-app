@@ -1,5 +1,30 @@
-<app-rx-parent></app-rx-parent>
+<p class="text-purple border border-purple p-2 my-4 w-75 mx-auto">
+  NgRx Store is mainly for managing global state across an entire application.
+  In cases where you need to manage temporary or local component state, consider
+  using
+  <a
+    href="https://ngrx.io/guide/component-store"
+    target="_blank"
+    rel="nofollow noopener noreferrer"
+  >
+    NgRx ComponentStore</a
+  >
+</p>
 
-<app-rx-child></app-rx-child>
+<h1>
+  <a
+    href="https://ngrx.io/guide/component-store/comparison"
+    target="_blank"
+    rel="nofollow noopener noreferrer"
+  >
+    Store vs ComponentStore</a
+  >
+</h1>
 
-<app-rx-grandchild></app-rx-grandchild>
+<main class="border p-4 w-75 mx-auto">
+  <app-rx-parent></app-rx-parent>
+
+  <app-rx-child></app-rx-child>
+
+  <app-rx-grandchild></app-rx-grandchild>
+</main>
