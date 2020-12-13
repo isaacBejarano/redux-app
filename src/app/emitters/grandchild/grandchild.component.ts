@@ -3,9 +3,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 @Component({
   selector: 'app-grandchild',
   templateUrl: './grandchild.component.html',
-  styleUrls: ['./grandchild.component.scss'],
 })
 export class GrandchildComponent {
+    // TODO: use Redux
+
   @Input() counterLvl3: number; // prop
   @Output() counterEmitLvl3 = new EventEmitter<number>(); // prop
 

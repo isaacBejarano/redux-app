@@ -1,11 +1,15 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { faDivide, faClone } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-child',
   templateUrl: './child.component.html',
-  styleUrls: ['./child.component.scss'],
 })
 export class ChildComponent {
+  faDivide = faDivide;
+  faClone = faClone;
+
+  // TODO: use Redux
   @Input() counterLvl2: number; // prop
   @Output() counterEmitLvl2 = new EventEmitter<number>(); // prop
 

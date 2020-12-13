@@ -1,13 +1,14 @@
 <header>
   <h1 class="text-purple font-weight-lighter text-center py-2">redux-app</h1>
   <h2 class="bg-plum text-light font-weight-lighter text-center py-2 m-0">
-    ngRx = redux + RxJS
+    ngRx = Redux Pattern + RxJS
   </h2>
 </header>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light py-2">
   <img src="assets/ngRx.svg" width="70" alt="" />
 
+  <!-- hamburger -->
   <button
     #hamburger
     class="navbar-toggler collapsed"
@@ -21,6 +22,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
+  <!-- navbar -->
   <div class="navbar-collapse collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
@@ -29,7 +31,7 @@
           routerLink="emitters"
           routerLinkActive="active font-weight-bold"
           (click)="ToggleNavBar(hamburger)"
-          >{{ title1 }}<span class="sr-only">(current)</span></a
+          >{{ title1 }}<span class="sr-only">{{ title1 }}</span></a
         >
       </li>
       <li class="nav-item">

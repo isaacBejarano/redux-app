@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
+import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-parent',
   templateUrl: './parent.component.html',
-  styleUrls: ['./parent.component.scss'],
 })
 export class ParentComponent {
+  faPlus = faPlus;
+  faMinus = faMinus;
   counter = 0;
 
   constructor() {}

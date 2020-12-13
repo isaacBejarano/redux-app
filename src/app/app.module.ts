@@ -12,6 +12,8 @@ import { RxParentComponent } from './redux/rx-parent/rx-parent.component';
 import { RxChildComponent } from './redux/rx-child/rx-child.component';
 import { RxGrandchildComponent } from './redux/rx-grandchild/rx-grandchild.component';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,7 @@ import { RxGrandchildComponent } from './redux/rx-grandchild/rx-grandchild.compo
     RxChildComponent,
     RxGrandchildComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent],
 })
