@@ -2,6 +2,9 @@
 // THEMING
 // *******
 
+$theme7: papayawhip;
+$theme8: cadetblue;
+
 // color override
 $theme-colors: (
   // 1. default
@@ -14,6 +17,6 @@ $theme-colors: (
   "orange": orange,
   "gold": gold,
   "goldenrod": goldenrod,
-  "papayawhip": papayawhip
+  "papayawhip": $theme7,
 );
 
