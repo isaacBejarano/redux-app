@@ -10,6 +10,8 @@ export function counterReducer(state: number = 0, action: Action) {
       return state + 1; // != state++ (we don't wanna mutate state, just return a new value (state+1))
     case decrement.type:
       return state - 1; // != state--
+    case reset.type:
+      return state = 0; // reset
     default:
       return state;
   }
