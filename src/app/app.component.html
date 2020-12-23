@@ -1,14 +1,26 @@
 <header>
   <!-- TODO: remember: h1, h2.. are used in pages. Not in header.
   SEO => there must be only 1 h1 per page && every h2 per page must have diffrent textContent -->
-  <span class="d-block h1 text-purple font-weight-lighter text-center py-2">redux-app</span>
-  <span class="d-block h2 bg-plum text-light font-weight-lighter text-center py-2 m-0">
+  <span class="d-block h1 text-purple font-weight-lighter text-center py-2"
+    >redux-app</span
+  >
+  <span
+    class="d-block h2 bg-plum text-light font-weight-lighter text-center py-2 m-0"
+  >
     ngRx = Redux Pattern + RxJS
   </span>
 </header>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light py-2">
-  <img src="assets/ngRx.svg" width="70" alt="" />
+  <a routerLink="/">
+    <img src="assets/ngRx.svg" width="70" alt="" id="logo" />
+  </a>
+  <style>
+    img#logo:hover {
+      transform: scale(1.1);
+      transition: transform 0.1s;
+    }
+  </style>
 
   <!-- hamburger -->
   <button
