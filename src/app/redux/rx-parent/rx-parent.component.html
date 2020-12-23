@@ -1,1 +1,21 @@
-<p>rx-parent works!</p>
+<section class="py-3 border border-darkorange">
+  <h3 class="text-darkorange text-center font-weight-lighter">Parent</h3>
+
+  <h4 class="text-darkorange text-center">{{ counter }}</h4>
+
+  <div class="d-flex justify-content-center py-3">
+    <button class="btn btn-darkorange mr-1" (click)="plus()">
+      <fa-icon [icon]="faPlus"></fa-icon>
+      <span class="sr-only">increase 1</span>
+    </button>
+    <button class="btn btn-darkorange ml-1" (click)="minus()">
+      <fa-icon [icon]="faMinus"></fa-icon>
+      <span class="sr-only">decrease 1</span>
+    </button>
+  </div>
+</section>
+
+<!-- <app-child
+  [counterLvl2]="counter"
+  (counterEmitLvl2)="counter = $event"
+></app-child> -->

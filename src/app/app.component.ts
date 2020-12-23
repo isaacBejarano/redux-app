@@ -8,6 +8,8 @@ export class AppComponent {
   title1 = 'Emitters';
   title2 = 'Redux';
 
+  /* UTILITY */
+
   // collapse navbar-collapse on routerLink click
   ToggleNavBar(hamburger: HTMLButtonElement): void {
     if (hamburger.getAttribute('aria-expanded')) {

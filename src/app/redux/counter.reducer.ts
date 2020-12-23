@@ -1,18 +1,19 @@
-import { Action, createReducer, on } from '@ngrx/store';
+import { Action } from '@ngrx/store';
 import { increment, decrement, reset } from './counter.actions';
 
-// Reducer takes Actions + old State
-export function counterReducer(state: number = 0, action: Action) {
-  // "type" is prop of interface Action
-  // "type" is the string inside our actions method createAction(type)
+// Reducer takes Actions + old (| initial) State
+const counterReducer = (state = 3, action: Action) => {
+  // "type" is prop of interface Action - the param string inside createAction()
   switch (action.type) {
     case increment.type:
       return state + 1; // != state++ (we don't wanna mutate state, just return a new value (state+1))
     case decrement.type:
-      return state - 1; // != state--
+      return state - 1; // idem
     case reset.type:
-      return state = 0; // reset
+      return 0; // idem
     default:
-      return state;
+      return state; // compulsory
   }
-}
+};
+
+export { counterReducer };
