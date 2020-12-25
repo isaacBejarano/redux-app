@@ -16,10 +16,7 @@ export class RxParentComponent implements OnInit {
 
   // inject Store: service
   constructor(private store: Store<AppState>) {
-    this.store.subscribe((state) => {
-      console.log(state);
-      this.counter = state.count; // textContet feed from state
-    });
+    this.store.select('count').subscribe((count) => (this.counter = count));
   }
 
   /* hooks */
