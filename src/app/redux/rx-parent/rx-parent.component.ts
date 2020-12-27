@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 // ngRx
 import { Store } from '@ngrx/store';
-import * as actions from '../counter.actions';
+import { increment, decrement } from '../counter.actions';
 import { AppState } from '../interfaces/app-state';
 
 @Component({
@@ -22,11 +22,11 @@ export class RxParentComponent {
   }
 
   /* ngRX dipatched actions */ plus() {
-    this.store.dispatch(actions.increment());
+    this.store.dispatch(increment());
   }
 
   minus() {
-    this.store.dispatch(actions.decrement());
+    this.store.dispatch(decrement());
   }
 }
 

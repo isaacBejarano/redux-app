@@ -6,11 +6,11 @@ import * as actions from './counter.actions';
 ///////////////////////////////////////
 
 // I. Initial State
-const state = 3; // initial state
+const initState = 3; // initial
 
 // II. define Intructions for Actions
 const _counterReducer = createReducer(
-  state,
+  initState,
   // actions
   on(actions.increment, (state) => state + 1),
   on(actions.decrement, (state) => state - 1),
@@ -18,16 +18,16 @@ const _counterReducer = createReducer(
   on(actions.halve, (state) => state / 2),
   on(actions.multiply, (state, { payload }) => state * payload),
   on(actions.divide, (state, { payload }) => state / payload),
-  on(actions.reset, () => 0)
+  on(actions.reset, () => initState) // ~ (state) => state * 0 + initState
 );
 
 // III. factory
-function counterReducer(state: number, action: Action) {
+const counterReducer = (state: number, action: Action) => {
   return _counterReducer(state, action);
-}
+};
 
 // IV. export state & factory
-export { state, counterReducer };
+export { initState, counterReducer };
 
 //////////////////////////
 //  generic JS version  //
