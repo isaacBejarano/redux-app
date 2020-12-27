@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
-
+// ngRx
 import { Store } from '@ngrx/store';
-import { AppState } from '../interfaces/state';
 import * as actions from '../counter.actions';
+import { AppState } from '../interfaces/app-state';
 
 @Component({
   selector: 'app-rx-parent',
@@ -32,5 +32,5 @@ export class RxParentComponent {
 
 // NOTE: Contructor vs ON INIT
 //   initial state defined in counter.reducer.ts
-//   variabl2 "count2 defined in app.modules.ts"
+//   variable "count" defined in app.modules.ts"
 //   it recognized "state" cox we'r using StoreModule in forRoot()

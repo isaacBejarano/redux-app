@@ -1,16 +1,38 @@
 <section class="py-3 border border-violet">
-	<h3 class="text-violet text-center font-weight-lighter">Parent</h3>
-  
-	<h4 class="text-violet text-center">{{ counter }}</h4>
-  
-	<div class="d-flex justify-content-center py-3">
-	  <button class="btn btn-violet mr-1" (click)="double()">
-		<fa-icon [icon]="faClone"></fa-icon>
-		<span class="sr-only">double</span>
-	  </button>
-	  <button class="btn btn-violet ml-1" (click)="halve()">
-		<fa-icon [icon]="faDivide"></fa-icon>
-		<span class="sr-only">halve</span>
-	  </button>
-	</div>
-  </section>
+  <h3 class="text-violet text-center font-weight-lighter">Child</h3>
+
+  <h4 class="text-violet text-center">{{ counter }}</h4>
+
+  <hr />
+
+  <h5 class="text-center">double / halve</h5>
+
+  <div class="d-flex justify-content-center py-3">
+    <button class="btn btn-violet mr-1" (click)="double()">
+      <fa-icon [icon]="faClone"></fa-icon>
+      <span class="sr-only">double</span>
+    </button>
+    <button class="btn btn-violet ml-1" (click)="halve()">
+      <fa-icon [icon]="faDivide"></fa-icon>
+      <span class="sr-only">halve</span>
+    </button>
+  </div>
+
+  <hr />
+
+  <!-- actions with props (payloads) -->
+  <h5 class="text-center">
+    multiply({{ payload }}) / divide({{ payload }})
+  </h5>
+
+  <div class="d-flex justify-content-center py-3">
+    <button class="btn btn-violet mr-1" (click)="multiply()">
+      <fa-icon [icon]="faClone"></fa-icon>
+      <span class="sr-only">multiply</span>
+    </button>
+    <button class="btn btn-violet ml-1" (click)="divide()">
+      <fa-icon [icon]="faDivide"></fa-icon>
+      <span class="sr-only">divide</span>
+    </button>
+  </div>
+</section>
