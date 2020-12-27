@@ -4,13 +4,13 @@
   <h4 class="text-orange text-center">{{ counterLvl2 }}</h4>
 
   <div class="d-flex justify-content-center py-3">
-    <button class="btn btn-orange mr-1" (click)="halve()">
-      <fa-icon [icon]="faDivide"></fa-icon>
-      <span class="sr-only">halve</span>
-    </button>
-    <button class="btn btn-orange ml-1" (click)="double()">
+    <button class="btn btn-orange mr-1" (click)="double()">
       <fa-icon [icon]="faClone"></fa-icon>
       <span class="sr-only">duplicate</span>
+    </button>
+    <button class="btn btn-orange ml-1" (click)="halve()">
+      <fa-icon [icon]="faDivide"></fa-icon>
+      <span class="sr-only">halve</span>
     </button>
   </div>
 </section>

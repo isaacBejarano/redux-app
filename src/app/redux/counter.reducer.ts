@@ -1,5 +1,33 @@
 import { Action, createReducer, on } from '@ngrx/store';
-import { increment, decrement, reset } from './counter.actions';
+import { increment, decrement, double, halve, reset } from './counter.actions';
+
+///////////////////////////////////////
+//  ngRx version (faster, scalable)  //
+///////////////////////////////////////
+
+// I. Initial State
+const state = 3; // initial state
+
+// II. define Intructions for Actions
+const _counterReducer = createReducer(
+  state,
+  // actions
+  on(increment, (state) => state + 1),
+  on(decrement, (state) => state - 1),
+  on(double, (state) => state * 2),
+  on(halve, (state) => state / 2),
+  on(reset, () => 0)
+);
+
+// III. factory
+function counterReducer(state: number, action: Action) {
+  return _counterReducer(state, action);
+}
+
+// IV. export state & factory
+export { state, counterReducer };
+
+// NOTE: generic redux version
 
 // Reducer takes Actions + old (| initial) State
 // "type" is prop of interface Action - the param string inside createAction()
@@ -15,18 +43,4 @@ import { increment, decrement, reset } from './counter.actions';
 //       return state; // compulsory
 //   }
 // };
-
 // export { counterReducer };
-
-const state = 3; // init state
-
-const _counterReducer = createReducer(
-  state,
-  on(increment, (state) => state + 1),
-  on(decrement, (state) => state - 1),
-  on(reset, () => 0)
-);
-
-export function counterReducer(state, action) {
-  return _counterReducer(state, action);
-}
