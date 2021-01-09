@@ -37,7 +37,8 @@ import { RxGrandchildComponent } from './redux/rx-grandchild/rx-grandchild.compo
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    StoreModule.forRoot({ count: counterReducer }), // variable "count" in store gets return of reducer
+    StoreModule.forRoot({ count: counterReducer }), // counterReducer returns state value
+    // ngRx Dev Tools (optional)
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode

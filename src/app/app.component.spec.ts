@@ -16,9 +16,9 @@ describe('AppComponent', () => {
   let ref: HTMLElement;
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AppComponent);
-    app = fixture.componentInstance;
-    ref = fixture.nativeElement;
+    fixture = TestBed.createComponent(AppComponent); // has instance + template
+    app = fixture.componentInstance; // instance
+    ref = fixture.nativeElement; // template
   });
   // ..............
 
@@ -27,11 +27,11 @@ describe('AppComponent', () => {
   });
 
   it(`title1 is 'redux-app'`, () => {
-    expect(app.title1).toEqual('redux-app');
+    expect(app.title1).toEqual('Emitters');
   });
 
-  it(`title2 is 'ngRx = Redux + RxJS'`, () => {
-    expect(app.title2).toEqual('ngRx = Redux + RxJS');
+  it(`title2 is 'ngRx = Redux Pattern + RxJS'`, () => {
+    expect(app.title2).toEqual('Redux');
   });
 
   it('renders textContent Emitters', () => {
